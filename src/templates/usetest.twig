@@ -1,0 +1,24 @@
+{% extends "_base.twig" %}
+
+
+
+{% block content %}
+
+
+  {% embed "layouts/_l-one-column.twig" %}
+  {% block contentOneColumn %}
+    <h2>Test {{title}}</h2>
+    <p class="test">This is my content {{subtitle}}</p>
+  {% endblock contentOneColumn %}
+  {% endembed %}
+
+  {% embed "layouts/_l-two-column.twig" %}
+    {% block contentColumnA%}
+      This is column A 
+    {% endblock contentColA%}
+    {% block contentColumnB%}
+      This is column B
+    {% endblock contentColB%}
+  {% endembed %}
+
+{% endblock content %}
