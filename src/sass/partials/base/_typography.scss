@@ -1,0 +1,94 @@
+
+$san-family: "Source Sans Pro","HelveticaNeue","Helvetica","Arial",sans-serif;
+$serif-family: "GalaxieCopernicus-Medium",Georgia,Times,"Times New Roman",serif;
+
+.sans {
+  font-family: $san-family;
+}
+
+.serif {
+  font-family: $serif-family;
+}
+
+
+p {
+  text-align: left;
+  Margin: 0;
+  //Outlook wont strip "Margin" https://www.campaignmonitor.com/blog/email-marketing/2013/01/outlook-com-drops-margin-and-float-support-entirely/
+}
+
+a {
+  color: #ee6a56;
+  text-decoration: underline;
+  transition: color 250ms ease-in;
+  &:hover,
+  &:active {
+    color: #54585a;
+  }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-align: left;
+  a {
+    text-decoration: none;
+  }
+}
+
+
+.h1 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: $serif-family;
+  Margin-bottom: 18px;
+}
+
+.h2 {
+  font-size: 18px;
+  font-weight: bold;
+  Margin-bottom: 12px;
+}
+
+.h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $serif-family;
+  Margin-bottom: 12px;
+}
+
+.h4 {
+  font-size: 18px;
+  font-weight: bold;
+  Margin-bottom: 12px;
+}
+
+
+.text {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  color: #333333;
+
+}
+
+
+.is-centered {
+  text-align: center;
+}
+
+$spacing: 12px;
+
+.is-spaced-above {
+  Margin-top: 12px;
+}
+
+.is-spaced-above-2x {
+  Margin-top: $spacing * 2;
+}
+
+.is-spaced-below {
+  Margin-bottom: 12px;
+}
+
+.is-spaced-below2x {
+  Margin-bottom: $spacing * 2;
+}

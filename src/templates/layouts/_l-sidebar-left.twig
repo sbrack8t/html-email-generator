@@ -1,32 +1,32 @@
 
 <tr>
-  <td class="l-two-column">
+  <td class="l-sidebar-left">
     <!--[if mso]>
     <table width="100%">
     <tr>
-    <td width="50%" valign="top">
+    <td width="100" valign="top">
     <![endif]-->
-    <div class="column">
+    <div class="column pos-left">
       <table width="100%">
               <tr>
                   <td class="inner">
-                    {% block twoColumnA %}
+                    {% block sidebarColumn%}
                       [column to go here]
-                    {% endblock twoColumnA %}
+                    {% endblock sidebarColumn%}
                   </td>
               </tr>
         </table>
       </div>
     <!--[if mso]>
-    </td><td width="50%" valign="top">
+    </td><td width="500" valign="top">
     <![endif]-->
-    <div class="column">
+    <div class="column main">
       <table width="100%">
               <tr>
                   <td class="inner">
-                    {% block twoColumnB %}
+                    {% block mainColumn%}
                       [column to go here]
-                    {% endblock twoColumnB %}
+                    {% endblock mainColumn%}
                   </td>
               </tr>
         </table>

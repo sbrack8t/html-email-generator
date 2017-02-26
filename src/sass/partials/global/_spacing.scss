@@ -1,0 +1,15 @@
+$base-padding: 16px;
+
+
+
+.is-padding-bottom {
+  padding-bottom: $base-padding;
+}
+
+.is-padding-bottom2x {
+  padding-bottom: ($base-padding * 2) !important;
+}
+
+.is-padding-bottom3x {
+  padding-bottom: ($base-padding * 3) !important;
+}

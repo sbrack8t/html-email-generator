@@ -1,0 +1,25 @@
+
+
+
+{##
+# Generate Bulletproof buttons
+#https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design
+
+# @param string buttonText  Button text
+# @param string buttonLink  Url for anchor link
+# @param string bgcolor     Fallback color for Outlook and older clients
+# @param string alignment   Align button 'left', right, or center. center is default
+#}
+{% macro button(buttonText, buttonLink, bgcolor, alignment ) %}
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <table class="button{{ buttonModifier }}" border="0" cellspacing="0" cellpadding="0" align="{{ alignment|default('center') }}">
+        <tr class="button__row">
+          <td class="button__cell" align="center" bgcolor="{{ bgcolor|default('#cccccc') }}"><a class="button__link" href="{{ buttonLink }}" target="_blank">{{ buttonText|default('Button') }}</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{% endmacro %}

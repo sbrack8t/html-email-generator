@@ -1,0 +1,13 @@
+{% import "../macros/_m-images.twig" as images %}
+
+
+{% embed "../layouts/_l-one-column.twig" with  {
+  'modifier': 'logo__block is-padding-bottom2x'
+  }
+%}
+{% block contentOneColumn %}
+  <a class="logo" href="{{ url }}">
+      {{ images.image('Forumone', 'http://go.forumone.com/l/71122/2017-02-05/4th5jn/71122/146825/logo_2x.png', 120, '40%') }}
+  </a>
+{% endblock contentOneColumn %}
+{% endembed %}

@@ -1,0 +1,20 @@
+
+
+.l-sidebar-left {
+  text-align: center;
+  font-size: 0;
+
+  .column {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .pos-left {
+    max-width: 100px;
+  }
+
+  .main {
+    max-width: 500px;
+  }
+}

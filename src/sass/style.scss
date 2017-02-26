@@ -1,5 +1,4 @@
-
-
-html, body {
-  color: blue;
-}
+@import 'global';
+@import 'base';
+@import 'layout';
+@import 'components';

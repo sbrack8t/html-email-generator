@@ -36,7 +36,8 @@ gulp.task('inline-css', ['compile'], function() {
             applyStyleTags: true,
             applyLinkTags: true,
             removeStyleTags: false,
-            removeLinkTags: true
+            removeLinkTags: false,
+            preserveMediaQueries: true
     }))
     .pipe(gulp.dest(config.productionDir));
 });

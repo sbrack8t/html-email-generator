@@ -2,9 +2,11 @@
     <td class="l-one-column">
         <table width="100%">
             <tr>
-                <td class="inner contents">
+                <td class="inner contents {{modifier}}">
                     {% block contentOneColumn %}
-                      Content for single column
+                      <p style="padding: 10px; background: #ccc">
+                        Content for single column
+                      </p>
                     {% endblock contentOneColumn %}
                 </td>
             </tr>

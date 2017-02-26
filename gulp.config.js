@@ -21,7 +21,8 @@ module.exports = function() {
       sass: sourceDir + '/sass/**/*.scss',
       html: sourceDir + '/templates/**/*.twig',
       layouts: sourceDir + '/layouts/*.html',
-      images: sourceDir + '/images/**/*'
+      images: sourceDir + '/images/**/*',
+      json: sourceDir + '/templates/**/*.json'
     },
     browsersync: {
       port: 8080,

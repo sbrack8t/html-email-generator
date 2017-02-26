@@ -1,4 +1,22 @@
 {
   "title" : "This is my test json title",
-  "subtitle" : "this is my subtitle"
+  "subtitle" : "this is my subtitle",
+  "social" : {
+    "facebook" : {
+      "url": "https://www.facebook.com/forumone/",
+      "image" : "http://go.forumone.com/l/71122/2017-02-05/4th5jd/71122/146815/icon_facebook_2x.png"
+    },
+    "twitter" : {
+      "url": "https://twitter.com/forumone",
+      "image" : "http://go.forumone.com/l/71122/2017-02-05/4th5jq/71122/146821/icon_twitter_2x.png"
+    },
+    "linkedin" : {
+      "url": "https://www.linkedin.com/company/forum-one",
+      "image" : "http://go.forumone.com/l/71122/2017-02-05/4th5jj/71122/146819/icon_linkedin_2x.png"
+    },
+    "instagram" : {
+      "url": "https://www.instagram.com/forum_one",
+      "image" : "http://go.forumone.com/l/71122/2017-02-05/4th5jg/71122/146817/icon_instagram_2x.png"
+    }
+  }
 }

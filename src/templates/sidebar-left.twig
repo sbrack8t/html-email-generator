@@ -1,0 +1,20 @@
+{% extends "_base.twig" %}
+
+
+{% block content %}
+
+  {% embed "layouts/_l-sidebar-left.twig" %}
+    {% block sidebarColumn %}
+    <p style="font-size: 16px; padding: 10px; background: #ccc">
+      Content for the first Column
+    </p>
+    {% endblock sidebarColumn %}
+
+    {% block mainColumn %}
+    <p style="font-size: 16px; padding: 10px; background: #ccc">
+      Content for the second Column
+    </p>
+
+    {% endblock mainColumn %}
+  {% endembed %}
+{% endblock content %}

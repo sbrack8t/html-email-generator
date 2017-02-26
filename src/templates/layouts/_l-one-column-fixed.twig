@@ -1,0 +1,27 @@
+<tr>
+    <td class="l-one-column-fixed">
+      <!--[if mso]>
+      <table width="100%">
+      <tr>
+      <td width="400" valign="top">
+      <![endif]-->
+      <div class="column">
+          <table width="100%">
+            <tr>
+                <td class="inner contents {{modifier}}">
+                    {% block contentOneColumnFixed %}
+                      <p style="padding: 10px; background: #ccc">
+                        Content for single column
+                      </p>
+                    {% endblock contentOneColumnFixed %}
+                </td>
+            </tr>
+        </table>
+      </div>
+        <!--[if mso]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+    </td>
+</tr>

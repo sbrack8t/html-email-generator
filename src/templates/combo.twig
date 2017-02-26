@@ -1,0 +1,71 @@
+{% extends "_base.twig" %}
+
+
+{% block content %}
+
+{% embed "layouts/_l-sidebar-left.twig" %}
+  {% block sidebarColumn %}
+  <p style="font-size: 16px; padding: 10px; background: #ccc">
+    Content for the first Column
+  </p>
+  {% endblock sidebarColumn %}
+
+  {% block mainColumn %}
+  <p style="font-size: 16px; padding: 10px; background: #ccc">
+    Content for the second Column
+  </p>
+  {% endblock mainColumn %}
+{% endembed %}
+
+
+{% embed "layouts/_l-one-column.twig" %}
+{% block singleColumn %}
+{% embed "layouts/_l-two-column.twig" %}
+  {% block twoColumnA%}
+  <p style="font-size: 16px; padding: 10px; background: #ccc">
+    Content for the first Column
+  </p>
+  {% endblock twoColumnA%}
+
+  {% block twoColumnB%}
+  <p style="font-size: 16px; padding: 10px; background: #ccc">
+    Content for the second Column
+  </p>
+  {% endblock twoColumnB%}
+{% endembed %}
+
+{% endblock singleColumn %}
+
+{% endembed %}
+
+  {% embed "layouts/_l-two-column.twig" %}
+    {% block twoColumnA%}
+    <p style="font-size: 16px; padding: 10px; background: #ccc">
+      Content for the first Column
+    </p>
+    {% endblock twoColumnA%}
+
+    {% block twoColumnB%}
+    <p style="font-size: 16px; padding: 10px; background: #ccc">
+      Content for the second Column
+    </p>
+    {% endblock twoColumnB%}
+  {% endembed %}
+
+  {% embed "layouts/_l-two-column.twig" %}
+    {% block twoColumnA%}
+    <p style="font-size: 16px; padding: 10px; background: #ccc">
+      Another Group Content for the first Column
+    </p>
+    {% endblock twoColumnA%}
+
+    {% block twoColumnB%}
+    <p style="font-size: 16px; padding: 10px; background: #ccc">
+      Another Group Content for the second Column
+    </p>
+    {% endblock twoColumnB%}
+  {% endembed %}
+
+
+
+{% endblock content %}

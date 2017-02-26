@@ -1,0 +1,12 @@
+{% import "../macros/_m-images.twig" as images %}
+
+<table class="social" align="center" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    {% for key, item in social %}
+      <td class="social__item">
+        <a class="social__link" href="{{ item.url }}">
+          {{ images.imagefixed( key , item.image , 22) }}</a>
+      </td>
+    {% endfor %}
+  </tr>
+</table>

@@ -1,0 +1,35 @@
+
+{##
+# Generate basic responsive image markup
+#
+# @param string alt  Alt image text
+# @param string source  Image source file
+# @param string size  Rendered size of image
+# @param string maxwidth  Maximum width for responsive px or %
+#}
+
+{% macro image(alt, source, size, maxwidth) %}
+  <img alt="{{ alt|default('hello') }}" src="{{ source }}" width="{{size|default('600')}}" style="display: block; width: 100%; max-width: {{ maxwidth|default('100%') }}; min-width: 100px; font-family: sans-serif; color: #000000; font-size: 24px;" border="0"/>
+{% endmacro %}
+
+{% macro imagefixed(alt, source, size, maxwidth) %}
+  <img alt="{{ alt|default('hello') }}" src="{{ source }}" width="{{size|default('600')}}" style="display: block; max-width:{{ maxwidth|default('100%') }}; min-width: {{ maxwidth|default('100%') }}; font-family: sans-serif; color: #000000; font-size: 24px;" border="0"/>
+{% endmacro %}
+
+
+
+{##
+# Generate hero image section with table row and cell wrappers
+#
+# @param string alt  Alt image text
+# @param string source  Image source file
+# @param string size  Rendered size of image
+#}
+{% macro hero(alt, source, size) %}
+  {% import _self as images %}
+  <tr>
+      <td class="hero-image">
+        {{ images.image(alt, source, size) }}
+      </td>
+  </tr>
+{% endmacro %}

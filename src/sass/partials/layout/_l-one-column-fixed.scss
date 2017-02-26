@@ -1,0 +1,14 @@
+$width-2column: 460px;
+
+
+.l-one-column-fixed {
+  text-align: center;
+  font-size: 0;
+
+   .column {
+     max-width: $width-2column;
+     display: inline-block;
+     vertical-align: top;
+     width: 100%;
+   }
+}
