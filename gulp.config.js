@@ -1,7 +1,6 @@
 /*
-* All gulpfile configuration options
-*/
-
+ * All gulpfile configuration options
+ */
 
 module.exports = function() {
   var sourceDir = 'src';
