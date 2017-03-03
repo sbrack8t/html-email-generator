@@ -1,0 +1,26 @@
+$base-padding: 16px;
+
+
+.is-padding-bottom {
+  padding-bottom: $base-padding;
+}
+
+.is-padding-bottom2x {
+  padding-bottom: ($base-padding * 2) !important;
+}
+
+.is-padding-bottom3x {
+  padding-bottom: ($base-padding * 3) !important;
+}
+
+.is-padding-top {
+  padding-top: $base-padding;
+}
+
+.is-padding-top2x {
+  padding-top: ($base-padding * 2) !important;
+}
+
+.is-padding-top3x {
+  padding-top: ($base-padding * 3) !important;
+}

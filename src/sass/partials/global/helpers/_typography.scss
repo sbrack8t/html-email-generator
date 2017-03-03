@@ -1,0 +1,25 @@
+// @file
+// Typographic helpers
+
+
+
+@mixin setFontSize(
+  $font-size: $base-font-size,
+  $line-height: $base-line-height,
+  $color: $primary-text-color
+  ) {
+  color: $color;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+
+
+
+.text {
+  @include setFontSize;
+}
+
+.text--small {
+  @include setFontSize($font-size-sm, 20px);
+}

@@ -1,0 +1,171 @@
+// @file
+// Styling for base html elements.
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+p {
+  text-align: left;
+
+  Margin: 0;
+  //Outlook wont strip "Margin" https://www.campaignmonitor.com/blog/email-marketing/2013/01/outlook-com-drops-margin-and-float-support-entirely/
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  transition: color 250ms ease-in;
+  &:hover,
+  &:active {
+    color: #54585a;
+  }
+}
+
+
+body {
+  background-color: #ffffff;
+  margin: 0 !important;
+  padding: 0;
+}
+
+
+
+div[style*='margin: 16px 0'] {
+  margin:0 !important;
+}
+
+
+%hN {
+  color: $heading-text-color;
+  font-family: $header-font-family;
+  hyphens: none;
+
+  text-rendering: optimizeLegibility;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  text-align: left;
+  a {
+    text-decoration: none;
+  }
+}
+
+// Style links inside header tags
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+  font-weight: bold;
+
+  Margin-bottom: 18px;
+  @extend %hN
+}
+
+h2,
+.h2 {
+  font-size: 18px;
+  font-weight: bold;
+
+  Margin-bottom: 12px;
+  @extend %hN
+}
+
+h3,
+.h3 {
+  font-size: 18px;
+  font-weight: bold;
+
+  Margin-bottom: 12px;
+  @extend %hN
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  font-weight: bold;
+
+  Margin-bottom: 12px;
+  @extend %hN
+}
+
+html {
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: 100% * ($base-font-size / 16px);
+  height: 100%;
+  hyphens: none;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+img {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #333333;
+  font-family: sans-serif;
+}
+
+td {
+  padding: 0;
+}
+
+
+
+// TODO Move to a new location
+.text {
+  color: #333333;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+
+.is-centered {
+  text-align: center;
+}
+
+
+// TODO move spacing items to new location
+$spacing: 12px;
+
+.is-spaced-above {
+  Margin-top: 12px;
+}
+
+.is-spaced-above-2x {
+  Margin-top: $spacing * 2;
+}
+
+.is-spaced-below {
+  Margin-bottom: 12px;
+}
+
+.is-spaced-below2x {
+  Margin-bottom: $spacing * 2;
+}

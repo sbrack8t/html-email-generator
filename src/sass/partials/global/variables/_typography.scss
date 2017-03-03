@@ -1,0 +1,28 @@
+// @file
+// Typography Variables
+
+
+$sans-family: "Source Sans Pro","HelveticaNeue","Helvetica","Arial",sans-serif;
+$serif-family: "GalaxieCopernicus-Medium",Georgia,Times,"Times New Roman",serif;
+$base-line-height: 24px;
+$base-font-size: 16px;
+$font-size-xxl: 34px;
+$font-size-xl: 24px;
+$font-size-lg: 18px;
+$font-size-normal: $base-font-size;
+$font-size-md: 15px;
+$font-size-sm: 12px;
+$font-size-xs: 10px;
+
+$header-font-family: $sans-family;
+$base-font-family: $sans-family;
+
+;
+
+//Font weights:
+$font-w-reg: 400;
+$font-w-medium: 500;
+$font-w-bold: 700;
+
+// Buttons
+$button-font-family: $sans-family;

@@ -14,6 +14,7 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   inlineCss = require('gulp-inline-css'),
   sassLint = require('gulp-sass-lint'),
+  sassGlobbing = require('gulp-sass-globbing'),
   twig = require('gulp-twig');
 
 
@@ -21,10 +22,32 @@ var gulp = require('gulp'),
 var config = require('./gulp.config')();
 
 //Compile Sass using libsass
-gulp.task('sass', function() {
+gulp.task('sass', ['sass-globbing'] , function() {
   return gulp.src(['src/sass/**/*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(config.localDir + '/css'));
+});
+
+
+//Globbing
+gulp.task('sass-globbing', function(){
+    var globbingFiles = JSON.parse(fs.readFileSync('./src/sass/sass-globbing.json'));
+    for (var target in globbingFiles) {
+       if (globbingFiles.hasOwnProperty(target)) {
+          var sourceFiles = globbingFiles[target];
+          gulp.src(sourceFiles, {cwd: './src/sass'})
+          .pipe(sassGlobbing(
+            {
+              path: target
+            },
+            {
+              useSingleQuotes: true,
+              signature: '// Generated with gulp-sass-globbing.'
+            }
+          ))
+          .pipe(gulp.dest('./src/sass'));
+       }
+    }
 });
 
 
