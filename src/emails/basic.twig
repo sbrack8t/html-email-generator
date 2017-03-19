@@ -1,11 +1,10 @@
-
-{% extends "_base.twig" %}
-{% import "macros/_m-images.twig" as images %}
-{% import "macros/_m-buttons.twig" as buttons %}
+{% extends "../templates/_base.twig" %}
+{% import "../templates/macros/_m-images.twig" as images %}
+{% import "../templates/macros/_m-buttons.twig" as buttons %}
 
 
 {% block content %}
-  {% embed "layouts/_l-one-column.twig" %}
+  {% embed "../templates/layouts/_l-one-column.twig" %}
   {% block contentOneColumn %}
     <p class="category">WEBINAR</p>
     <p class="h1">Aligning your forces for Good</p>
@@ -16,7 +15,7 @@
 
 
 
-  {% embed "layouts/_l-one-column.twig" %}
+  {% embed "../templates/layouts/_l-one-column.twig" %}
     {% block contentOneColumn %}
       <p class="h2">Creative + Development</p>
       <p class="h2"><span class="appleLinksBlack">Wednesday, November 16th, 1:00 - 2:00pm ET</span></p>
@@ -29,7 +28,7 @@
     {% endblock contentOneColumn %}
   {% endembed %}
 
-  {% embed "layouts/_l-two-column.twig" %}
+  {% embed "../templates/layouts/_l-two-column.twig" %}
     {% block twoColumnA %}
       <div class="article">
         <p class="is-spaced-below">
@@ -50,7 +49,7 @@
     {% endblock twoColumnB %}
   {% endembed %}
 
-  {% embed "layouts/_l-two-column.twig" %}
+  {% embed "../templates/layouts/_l-two-column.twig" %}
     {% block twoColumnA %}
       <div class="article">
         <p class="is-spaced-below">
@@ -65,7 +64,7 @@
     {% endblock twoColumnB %}
   {% endembed %}
 
-  {% embed "layouts/_l-one-column-fixed.twig" %}
+  {% embed "../templates/layouts/_l-one-column-fixed.twig" %}
   {% block contentOneColumnFixed %}
   <div class="article--feature">
     <p class="is-spaced-below">

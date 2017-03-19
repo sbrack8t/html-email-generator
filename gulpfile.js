@@ -50,10 +50,9 @@ gulp.task('sass-globbing', function(){
     }
 });
 
-
 // Inline all CSS styles
 // Minify HTML (Optional argument: --minify)
-gulp.task('inline-css', ['compile'], function() {
+gulp.task('compile-prod', ['compile'], function() {
   return gulp.src(config.localDir + '/*.html')
     .pipe(inlineCss({
       applyStyleTags: true,
@@ -79,9 +78,6 @@ gulp.task('images:local', function() {
     .pipe(gulp.dest(config.localDir + '/images'));
 });
 
-
-
-
 //Browser Sync
 gulp.task('connect', ['compile'], function() {
   browserSync.init({
@@ -92,7 +88,9 @@ gulp.task('connect', ['compile'], function() {
     },
     port: config.browsersync.port,
     open: config.browsersync.open,
-    notify: config.browsersync.notify
+    notify: config.browsersync.notify,
+    reloadDelay: 2000,
+    startPath: "index.html"
   });
 
   gulp.watch([config.sourcePath.sass, config.sourcePath.html], ['compile']);
@@ -104,8 +102,12 @@ gulp.task('connect', ['compile'], function() {
 
 //Compile Twig files
 gulp.task('compile', ['sass'], function() {
-  return gulp.src(['src/templates/**/*.twig', '!src/templates/**/_*.twig'])
+  return gulp.src(['src/**/*.twig', '!src/**/_*.twig'])
     .pipe(data(function(file) {
+
+      var emailList = fs.readdirSync('./src/emails');
+
+      // console.log(emailList);
 
       //Get location of template Json override
       var tempJsonFile = './src/templates/' + path.basename(file.path, '.twig') + '.json';
@@ -117,7 +119,9 @@ gulp.task('compile', ['sass'], function() {
       var srcData = require('./src/data/data.json');
 
       //Merge data
-      var data = _.merge({}, srcData, json);
+      var data = _.merge({
+        'files' : emailList 
+      }, srcData, json);
 
       return data;
     }))

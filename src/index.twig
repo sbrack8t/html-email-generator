@@ -1,0 +1,24 @@
+{% set emailList = files %}
+
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Generator </title>
+</head>
+<body>
+  {% block content %}
+  <h1>Emails</h1>
+  <p>Test</p>
+  <ul>
+    {% for email in files %}
+       <li>
+        <a href="emails/{{ email|replace({'.twig': '.html'}) }}">{{ email }}</a>
+       </li>
+   {% endfor %}
+  </ul>
+
+  {% endblock content %}
+
+</body>
+</html>

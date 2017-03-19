@@ -18,7 +18,7 @@ module.exports = function() {
     ],
     sourcePath: {
       sass: sourceDir + '/sass/**/*.scss',
-      html: sourceDir + '/templates/**/*.twig',
+      html: sourceDir + '/**/*.twig',
       layouts: sourceDir + '/layouts/*.html',
       images: sourceDir + '/images/**/*',
       json: sourceDir + '/templates/**/*.json'
